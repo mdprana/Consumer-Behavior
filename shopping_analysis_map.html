@@ -1,0 +1,1133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_52d701ea4aad218882ff1f124df9c73d {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+   <div style="position: fixed; 
+               bottom: 50px; left: 50px; width: 150px; height: 90px; 
+               border:2px solid grey; z-index:9999; background-color:white;
+               opacity:0.8; font-size:12px; padding: 10px">
+       <b>Customer Count</b><br>
+       <i class="fa fa-circle fa-1x" style="color:blue"></i> Large<br>
+       <i class="fa fa-circle fa-1x" style="color:green"></i> Medium<br>
+       <i class="fa fa-circle fa-1x" style="color:red"></i> Small
+   </div>
+   
+    
+            <div class="folium-map" id="map_52d701ea4aad218882ff1f124df9c73d" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_52d701ea4aad218882ff1f124df9c73d = L.map(
+                "map_52d701ea4aad218882ff1f124df9c73d",
+                {
+                    center: [39.8283, -98.5795],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 4,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_17afa3adc7d972b35d3ed80dab346ed9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_17afa3adc7d972b35d3ed80dab346ed9.addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+            var circle_marker_6975b9cd35e4900a508f92a1d33c90df = L.circleMarker(
+                [32.7794, -86.8287],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_5c556ef0221755d074daca59e28f1aa6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d54fdace1720d2f74996b83df07f1ec8 = $(`<div id="html_d54fdace1720d2f74996b83df07f1ec8" style="width: 100.0%; height: 100.0%;">                <b>Alabama</b><br>                Customers: 89<br>                Avg Purchase: $59.11<br>                Total Sales: $5,261<br>                Top Category: Clothing            </div>`)[0];
+                popup_5c556ef0221755d074daca59e28f1aa6.setContent(html_d54fdace1720d2f74996b83df07f1ec8);
+            
+        
+
+        circle_marker_6975b9cd35e4900a508f92a1d33c90df.bindPopup(popup_5c556ef0221755d074daca59e28f1aa6)
+        ;
+
+        
+    
+    
+            var circle_marker_33abf34d846799865577b13f72032828 = L.circleMarker(
+                [64.0685, -152.2782],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_220c288d2da60d53e29014f453864350 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f70fe1c3cfa240c4c924f42bb460546 = $(`<div id="html_9f70fe1c3cfa240c4c924f42bb460546" style="width: 100.0%; height: 100.0%;">                <b>Alaska</b><br>                Customers: 72<br>                Avg Purchase: $67.6<br>                Total Sales: $4,867<br>                Top Category: Clothing            </div>`)[0];
+                popup_220c288d2da60d53e29014f453864350.setContent(html_9f70fe1c3cfa240c4c924f42bb460546);
+            
+        
+
+        circle_marker_33abf34d846799865577b13f72032828.bindPopup(popup_220c288d2da60d53e29014f453864350)
+        ;
+
+        
+    
+    
+            var circle_marker_d061fab3284f2b7792c5d542f43b6c40 = L.circleMarker(
+                [34.2744, -111.6602],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_71f9e40ba1b0fc3a26a38be1017f7b18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_569a4341da49d19881302f589ec53121 = $(`<div id="html_569a4341da49d19881302f589ec53121" style="width: 100.0%; height: 100.0%;">                <b>Arizona</b><br>                Customers: 65<br>                Avg Purchase: $66.55<br>                Total Sales: $4,326<br>                Top Category: Clothing            </div>`)[0];
+                popup_71f9e40ba1b0fc3a26a38be1017f7b18.setContent(html_569a4341da49d19881302f589ec53121);
+            
+        
+
+        circle_marker_d061fab3284f2b7792c5d542f43b6c40.bindPopup(popup_71f9e40ba1b0fc3a26a38be1017f7b18)
+        ;
+
+        
+    
+    
+            var circle_marker_3e5a9394844c2ceaf9dc8b25b6f1e041 = L.circleMarker(
+                [34.8938, -92.4426],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_027e9438d8f1b2072993399802195567 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91b4ade2702a30e2b58332a91a887254 = $(`<div id="html_91b4ade2702a30e2b58332a91a887254" style="width: 100.0%; height: 100.0%;">                <b>Arkansas</b><br>                Customers: 79<br>                Avg Purchase: $61.11<br>                Total Sales: $4,828<br>                Top Category: Clothing            </div>`)[0];
+                popup_027e9438d8f1b2072993399802195567.setContent(html_91b4ade2702a30e2b58332a91a887254);
+            
+        
+
+        circle_marker_3e5a9394844c2ceaf9dc8b25b6f1e041.bindPopup(popup_027e9438d8f1b2072993399802195567)
+        ;
+
+        
+    
+    
+            var circle_marker_fea3bd5e181b9d9c73410cf5859b8f74 = L.circleMarker(
+                [36.7783, -119.4179],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_7d576adbe0b720763d45a8c4c2704a34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_baad25622db0e68c0b641cc5de5adb0f = $(`<div id="html_baad25622db0e68c0b641cc5de5adb0f" style="width: 100.0%; height: 100.0%;">                <b>California</b><br>                Customers: 95<br>                Avg Purchase: $59.0<br>                Total Sales: $5,605<br>                Top Category: Clothing            </div>`)[0];
+                popup_7d576adbe0b720763d45a8c4c2704a34.setContent(html_baad25622db0e68c0b641cc5de5adb0f);
+            
+        
+
+        circle_marker_fea3bd5e181b9d9c73410cf5859b8f74.bindPopup(popup_7d576adbe0b720763d45a8c4c2704a34)
+        ;
+
+        
+    
+    
+            var circle_marker_ef2c134acd4c4534396e8a4c7dd3dfbb = L.circleMarker(
+                [39.5501, -105.7821],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_c69a5da91be081227ce712291c3702ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3f677ae2c7e72799f91763a8411f0a9c = $(`<div id="html_3f677ae2c7e72799f91763a8411f0a9c" style="width: 100.0%; height: 100.0%;">                <b>Colorado</b><br>                Customers: 75<br>                Avg Purchase: $56.29<br>                Total Sales: $4,222<br>                Top Category: Clothing            </div>`)[0];
+                popup_c69a5da91be081227ce712291c3702ce.setContent(html_3f677ae2c7e72799f91763a8411f0a9c);
+            
+        
+
+        circle_marker_ef2c134acd4c4534396e8a4c7dd3dfbb.bindPopup(popup_c69a5da91be081227ce712291c3702ce)
+        ;
+
+        
+    
+    
+            var circle_marker_353c2240ffbbde2b010f47729056fa81 = L.circleMarker(
+                [41.6032, -73.0877],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_4309a825f0ca742cdd9410c6091e1876 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a96d367af606c86e12741c15d6da2b80 = $(`<div id="html_a96d367af606c86e12741c15d6da2b80" style="width: 100.0%; height: 100.0%;">                <b>Connecticut</b><br>                Customers: 78<br>                Avg Purchase: $54.18<br>                Total Sales: $4,226<br>                Top Category: Clothing            </div>`)[0];
+                popup_4309a825f0ca742cdd9410c6091e1876.setContent(html_a96d367af606c86e12741c15d6da2b80);
+            
+        
+
+        circle_marker_353c2240ffbbde2b010f47729056fa81.bindPopup(popup_4309a825f0ca742cdd9410c6091e1876)
+        ;
+
+        
+    
+    
+            var circle_marker_1dda6e481ceda55d8468dbe3cf57dcef = L.circleMarker(
+                [38.9108, -75.5277],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.6, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_3678e712808c0889f4b3f7232ca33b2c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb3cf61f099f3461ff3bc5677f094fd8 = $(`<div id="html_fb3cf61f099f3461ff3bc5677f094fd8" style="width: 100.0%; height: 100.0%;">                <b>Delaware</b><br>                Customers: 86<br>                Avg Purchase: $55.33<br>                Total Sales: $4,758<br>                Top Category: Clothing            </div>`)[0];
+                popup_3678e712808c0889f4b3f7232ca33b2c.setContent(html_fb3cf61f099f3461ff3bc5677f094fd8);
+            
+        
+
+        circle_marker_1dda6e481ceda55d8468dbe3cf57dcef.bindPopup(popup_3678e712808c0889f4b3f7232ca33b2c)
+        ;
+
+        
+    
+    
+            var circle_marker_204ecc9e2f16121e4f11daf2125c43e9 = L.circleMarker(
+                [27.6648, -81.5158],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.8, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_1b1d016208eca5a2a7720d8da13bd2fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e95f3a39bb1b3766a1819618f1acc4bd = $(`<div id="html_e95f3a39bb1b3766a1819618f1acc4bd" style="width: 100.0%; height: 100.0%;">                <b>Florida</b><br>                Customers: 68<br>                Avg Purchase: $55.85<br>                Total Sales: $3,798<br>                Top Category: Clothing            </div>`)[0];
+                popup_1b1d016208eca5a2a7720d8da13bd2fe.setContent(html_e95f3a39bb1b3766a1819618f1acc4bd);
+            
+        
+
+        circle_marker_204ecc9e2f16121e4f11daf2125c43e9.bindPopup(popup_1b1d016208eca5a2a7720d8da13bd2fe)
+        ;
+
+        
+    
+    
+            var circle_marker_fb36b4e5fcdec0f7f4a747a8f4ca64f9 = L.circleMarker(
+                [32.1656, -82.9001],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_67c6777d885028e10e41f0ed10e5d034 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52c3911db993b54df03bfd7d4de64fd6 = $(`<div id="html_52c3911db993b54df03bfd7d4de64fd6" style="width: 100.0%; height: 100.0%;">                <b>Georgia</b><br>                Customers: 79<br>                Avg Purchase: $58.8<br>                Total Sales: $4,645<br>                Top Category: Clothing            </div>`)[0];
+                popup_67c6777d885028e10e41f0ed10e5d034.setContent(html_52c3911db993b54df03bfd7d4de64fd6);
+            
+        
+
+        circle_marker_fb36b4e5fcdec0f7f4a747a8f4ca64f9.bindPopup(popup_67c6777d885028e10e41f0ed10e5d034)
+        ;
+
+        
+    
+    
+            var circle_marker_392548b305e57bf3ba678a63ecc457b4 = L.circleMarker(
+                [19.8968, -155.5828],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_399ab0cbacd9b8cbeea817cf011d262a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16839ae07b874319482f7739c7600e61 = $(`<div id="html_16839ae07b874319482f7739c7600e61" style="width: 100.0%; height: 100.0%;">                <b>Hawaii</b><br>                Customers: 65<br>                Avg Purchase: $57.72<br>                Total Sales: $3,752<br>                Top Category: Clothing            </div>`)[0];
+                popup_399ab0cbacd9b8cbeea817cf011d262a.setContent(html_16839ae07b874319482f7739c7600e61);
+            
+        
+
+        circle_marker_392548b305e57bf3ba678a63ecc457b4.bindPopup(popup_399ab0cbacd9b8cbeea817cf011d262a)
+        ;
+
+        
+    
+    
+            var circle_marker_5ae2efa6af8093b5c05f41ac88dac394 = L.circleMarker(
+                [44.0682, -114.742],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_e8ba9022dfb1a47d86fb6b7aa3b8407d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_061abac76e401d7f72b5dc43d80a1898 = $(`<div id="html_061abac76e401d7f72b5dc43d80a1898" style="width: 100.0%; height: 100.0%;">                <b>Idaho</b><br>                Customers: 93<br>                Avg Purchase: $60.08<br>                Total Sales: $5,587<br>                Top Category: Clothing            </div>`)[0];
+                popup_e8ba9022dfb1a47d86fb6b7aa3b8407d.setContent(html_061abac76e401d7f72b5dc43d80a1898);
+            
+        
+
+        circle_marker_5ae2efa6af8093b5c05f41ac88dac394.bindPopup(popup_e8ba9022dfb1a47d86fb6b7aa3b8407d)
+        ;
+
+        
+    
+    
+            var circle_marker_52a3271f98550f505f1d945affeb6122 = L.circleMarker(
+                [40.0796, -89.4337],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.2, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_f30029fe8cf90c764ecd48f94a23b564 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59771c6381cec756eab19b60d5515358 = $(`<div id="html_59771c6381cec756eab19b60d5515358" style="width: 100.0%; height: 100.0%;">                <b>Illinois</b><br>                Customers: 92<br>                Avg Purchase: $61.05<br>                Total Sales: $5,617<br>                Top Category: Clothing            </div>`)[0];
+                popup_f30029fe8cf90c764ecd48f94a23b564.setContent(html_59771c6381cec756eab19b60d5515358);
+            
+        
+
+        circle_marker_52a3271f98550f505f1d945affeb6122.bindPopup(popup_f30029fe8cf90c764ecd48f94a23b564)
+        ;
+
+        
+    
+    
+            var circle_marker_afaba716ec0ec5491c79c28f1a7736cd = L.circleMarker(
+                [39.8647, -86.2604],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_31abad88fb92af2570e60852d4c178ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80239b1a56c3dca5d1e93c1b18b96f15 = $(`<div id="html_80239b1a56c3dca5d1e93c1b18b96f15" style="width: 100.0%; height: 100.0%;">                <b>Indiana</b><br>                Customers: 79<br>                Avg Purchase: $58.92<br>                Total Sales: $4,655<br>                Top Category: Clothing            </div>`)[0];
+                popup_31abad88fb92af2570e60852d4c178ad.setContent(html_80239b1a56c3dca5d1e93c1b18b96f15);
+            
+        
+
+        circle_marker_afaba716ec0ec5491c79c28f1a7736cd.bindPopup(popup_31abad88fb92af2570e60852d4c178ad)
+        ;
+
+        
+    
+    
+            var circle_marker_34c91145e0fb372ee1260e99a7174c6f = L.circleMarker(
+                [42.0046, -93.214],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_c7dfd3b92eae47826e445a72b79d9de8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cff28a5ca5b82cc370c4a995d6d9384 = $(`<div id="html_5cff28a5ca5b82cc370c4a995d6d9384" style="width: 100.0%; height: 100.0%;">                <b>Iowa</b><br>                Customers: 69<br>                Avg Purchase: $60.88<br>                Total Sales: $4,201<br>                Top Category: Clothing            </div>`)[0];
+                popup_c7dfd3b92eae47826e445a72b79d9de8.setContent(html_5cff28a5ca5b82cc370c4a995d6d9384);
+            
+        
+
+        circle_marker_34c91145e0fb372ee1260e99a7174c6f.bindPopup(popup_c7dfd3b92eae47826e445a72b79d9de8)
+        ;
+
+        
+    
+    
+            var circle_marker_196078e6edb64f8958312c68c80387eb = L.circleMarker(
+                [38.5266, -96.7265],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_7ef83ad53dd20cc04909b3a97601425d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_67989db5f0484a45475841d0e7136542 = $(`<div id="html_67989db5f0484a45475841d0e7136542" style="width: 100.0%; height: 100.0%;">                <b>Kansas</b><br>                Customers: 63<br>                Avg Purchase: $54.56<br>                Total Sales: $3,437<br>                Top Category: Clothing            </div>`)[0];
+                popup_7ef83ad53dd20cc04909b3a97601425d.setContent(html_67989db5f0484a45475841d0e7136542);
+            
+        
+
+        circle_marker_196078e6edb64f8958312c68c80387eb.bindPopup(popup_7ef83ad53dd20cc04909b3a97601425d)
+        ;
+
+        
+    
+    
+            var circle_marker_200b69770a65a3322849420e62e31eb2 = L.circleMarker(
+                [37.6681, -84.6701],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.9, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_f4eff19312dce7e084d812add11e66c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0670d75ed6db1aa53131fdd2176fefd = $(`<div id="html_e0670d75ed6db1aa53131fdd2176fefd" style="width: 100.0%; height: 100.0%;">                <b>Kentucky</b><br>                Customers: 79<br>                Avg Purchase: $55.72<br>                Total Sales: $4,402<br>                Top Category: Accessories            </div>`)[0];
+                popup_f4eff19312dce7e084d812add11e66c5.setContent(html_e0670d75ed6db1aa53131fdd2176fefd);
+            
+        
+
+        circle_marker_200b69770a65a3322849420e62e31eb2.bindPopup(popup_f4eff19312dce7e084d812add11e66c5)
+        ;
+
+        
+    
+    
+            var circle_marker_d5113eb362179a38df71a26db3130365 = L.circleMarker(
+                [31.1695, -91.8678],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.4, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_5157982b861b45c47d34ed5a7a8b9c3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_79066158860ab6d63c0c9a0f81db7612 = $(`<div id="html_79066158860ab6d63c0c9a0f81db7612" style="width: 100.0%; height: 100.0%;">                <b>Louisiana</b><br>                Customers: 84<br>                Avg Purchase: $57.71<br>                Total Sales: $4,848<br>                Top Category: Clothing            </div>`)[0];
+                popup_5157982b861b45c47d34ed5a7a8b9c3e.setContent(html_79066158860ab6d63c0c9a0f81db7612);
+            
+        
+
+        circle_marker_d5113eb362179a38df71a26db3130365.bindPopup(popup_5157982b861b45c47d34ed5a7a8b9c3e)
+        ;
+
+        
+    
+    
+            var circle_marker_385ca697d6550359b5b9e9b597bf1303 = L.circleMarker(
+                [44.6074, -69.3977],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_84c204cb1d74cee5d7704a443050cb2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eb9d34bb8fa012ee694f759199d32b60 = $(`<div id="html_eb9d34bb8fa012ee694f759199d32b60" style="width: 100.0%; height: 100.0%;">                <b>Maine</b><br>                Customers: 77<br>                Avg Purchase: $56.99<br>                Total Sales: $4,388<br>                Top Category: Clothing            </div>`)[0];
+                popup_84c204cb1d74cee5d7704a443050cb2b.setContent(html_eb9d34bb8fa012ee694f759199d32b60);
+            
+        
+
+        circle_marker_385ca697d6550359b5b9e9b597bf1303.bindPopup(popup_84c204cb1d74cee5d7704a443050cb2b)
+        ;
+
+        
+    
+    
+            var circle_marker_3495ebff951affbd8ca4abd916f017b3 = L.circleMarker(
+                [39.0458, -76.6413],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.6, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_469f3e1e72aa5fc5e6cac5b910739c42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_590ba4db406f10a8acea6c52fcaf540c = $(`<div id="html_590ba4db406f10a8acea6c52fcaf540c" style="width: 100.0%; height: 100.0%;">                <b>Maryland</b><br>                Customers: 86<br>                Avg Purchase: $55.76<br>                Total Sales: $4,795<br>                Top Category: Clothing            </div>`)[0];
+                popup_469f3e1e72aa5fc5e6cac5b910739c42.setContent(html_590ba4db406f10a8acea6c52fcaf540c);
+            
+        
+
+        circle_marker_3495ebff951affbd8ca4abd916f017b3.bindPopup(popup_469f3e1e72aa5fc5e6cac5b910739c42)
+        ;
+
+        
+    
+    
+            var circle_marker_7521606d5acd35f68b1f78aa33a3dbc1 = L.circleMarker(
+                [42.2373, -71.5314],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.2, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_6809b58e8a3155ae8dcede3643ecde30 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd8d95612761df7f15d94de3df22e184 = $(`<div id="html_dd8d95612761df7f15d94de3df22e184" style="width: 100.0%; height: 100.0%;">                <b>Massachusetts</b><br>                Customers: 72<br>                Avg Purchase: $60.89<br>                Total Sales: $4,384<br>                Top Category: Clothing            </div>`)[0];
+                popup_6809b58e8a3155ae8dcede3643ecde30.setContent(html_dd8d95612761df7f15d94de3df22e184);
+            
+        
+
+        circle_marker_7521606d5acd35f68b1f78aa33a3dbc1.bindPopup(popup_6809b58e8a3155ae8dcede3643ecde30)
+        ;
+
+        
+    
+    
+            var circle_marker_02b63d6557e7cd072306fcc193434fc4 = L.circleMarker(
+                [44.3148, -85.6024],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_2951c70853fe1b4bd0d207ccc5204a8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_544a196eb3fa0a1cebd13beaa87d5ebf = $(`<div id="html_544a196eb3fa0a1cebd13beaa87d5ebf" style="width: 100.0%; height: 100.0%;">                <b>Michigan</b><br>                Customers: 73<br>                Avg Purchase: $62.1<br>                Total Sales: $4,533<br>                Top Category: Clothing            </div>`)[0];
+                popup_2951c70853fe1b4bd0d207ccc5204a8c.setContent(html_544a196eb3fa0a1cebd13beaa87d5ebf);
+            
+        
+
+        circle_marker_02b63d6557e7cd072306fcc193434fc4.bindPopup(popup_2951c70853fe1b4bd0d207ccc5204a8c)
+        ;
+
+        
+    
+    
+            var circle_marker_b344ab6abb1e4e6544d58daa2982770a = L.circleMarker(
+                [46.7296, -94.6859],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.8, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_6239712bcfae75596a810f36d3429674 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_245b464e8181fd4ca4a11a526192d562 = $(`<div id="html_245b464e8181fd4ca4a11a526192d562" style="width: 100.0%; height: 100.0%;">                <b>Minnesota</b><br>                Customers: 88<br>                Avg Purchase: $56.56<br>                Total Sales: $4,977<br>                Top Category: Clothing            </div>`)[0];
+                popup_6239712bcfae75596a810f36d3429674.setContent(html_245b464e8181fd4ca4a11a526192d562);
+            
+        
+
+        circle_marker_b344ab6abb1e4e6544d58daa2982770a.bindPopup(popup_6239712bcfae75596a810f36d3429674)
+        ;
+
+        
+    
+    
+            var circle_marker_d722cccffb3e346636ee2795ae942c81 = L.circleMarker(
+                [32.7364, -89.6678],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.0, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_276ad19a3c083eb12e27b9debd1c951d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_104adc63f7fc0c2d9a1f9a69d5870218 = $(`<div id="html_104adc63f7fc0c2d9a1f9a69d5870218" style="width: 100.0%; height: 100.0%;">                <b>Mississippi</b><br>                Customers: 80<br>                Avg Purchase: $61.04<br>                Total Sales: $4,883<br>                Top Category: Clothing            </div>`)[0];
+                popup_276ad19a3c083eb12e27b9debd1c951d.setContent(html_104adc63f7fc0c2d9a1f9a69d5870218);
+            
+        
+
+        circle_marker_d722cccffb3e346636ee2795ae942c81.bindPopup(popup_276ad19a3c083eb12e27b9debd1c951d)
+        ;
+
+        
+    
+    
+            var circle_marker_358067013c8a302c19be30c09966a7ae = L.circleMarker(
+                [38.4561, -92.2884],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_a8a95ea476c5034169bebb31a27c9d93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d79750a8cb5b5327a1473a0d492d5202 = $(`<div id="html_d79750a8cb5b5327a1473a0d492d5202" style="width: 100.0%; height: 100.0%;">                <b>Missouri</b><br>                Customers: 81<br>                Avg Purchase: $57.91<br>                Total Sales: $4,691<br>                Top Category: Clothing            </div>`)[0];
+                popup_a8a95ea476c5034169bebb31a27c9d93.setContent(html_d79750a8cb5b5327a1473a0d492d5202);
+            
+        
+
+        circle_marker_358067013c8a302c19be30c09966a7ae.bindPopup(popup_a8a95ea476c5034169bebb31a27c9d93)
+        ;
+
+        
+    
+    
+            var circle_marker_0f23a04fbab98892771ca6af0af95979 = L.circleMarker(
+                [46.8797, -110.3626],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.6, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_dbd698b6b950a576931301a375bbdc44 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de4292a93937f8e5cc67d72e78efa69c = $(`<div id="html_de4292a93937f8e5cc67d72e78efa69c" style="width: 100.0%; height: 100.0%;">                <b>Montana</b><br>                Customers: 96<br>                Avg Purchase: $60.25<br>                Total Sales: $5,784<br>                Top Category: Clothing            </div>`)[0];
+                popup_dbd698b6b950a576931301a375bbdc44.setContent(html_de4292a93937f8e5cc67d72e78efa69c);
+            
+        
+
+        circle_marker_0f23a04fbab98892771ca6af0af95979.bindPopup(popup_dbd698b6b950a576931301a375bbdc44)
+        ;
+
+        
+    
+    
+            var circle_marker_9a70b27fc38554834fb9c382103ab48d = L.circleMarker(
+                [41.4925, -99.9018],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_da13048511fc05d251d2f2d985c69c81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df0241ff5999581505ee54e80142447e = $(`<div id="html_df0241ff5999581505ee54e80142447e" style="width: 100.0%; height: 100.0%;">                <b>Nebraska</b><br>                Customers: 87<br>                Avg Purchase: $59.45<br>                Total Sales: $5,172<br>                Top Category: Accessories            </div>`)[0];
+                popup_da13048511fc05d251d2f2d985c69c81.setContent(html_df0241ff5999581505ee54e80142447e);
+            
+        
+
+        circle_marker_9a70b27fc38554834fb9c382103ab48d.bindPopup(popup_da13048511fc05d251d2f2d985c69c81)
+        ;
+
+        
+    
+    
+            var circle_marker_312f26b1e7f27e5d999a122278286bce = L.circleMarker(
+                [38.8026, -116.4194],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_03c15f103668c820310013493a35d489 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1f8a3cdc965ce92e209c26be4d51746 = $(`<div id="html_d1f8a3cdc965ce92e209c26be4d51746" style="width: 100.0%; height: 100.0%;">                <b>Nevada</b><br>                Customers: 87<br>                Avg Purchase: $63.38<br>                Total Sales: $5,514<br>                Top Category: Clothing            </div>`)[0];
+                popup_03c15f103668c820310013493a35d489.setContent(html_d1f8a3cdc965ce92e209c26be4d51746);
+            
+        
+
+        circle_marker_312f26b1e7f27e5d999a122278286bce.bindPopup(popup_03c15f103668c820310013493a35d489)
+        ;
+
+        
+    
+    
+            var circle_marker_276f691c9838f2e6dc1e2b2e9b9d01a0 = L.circleMarker(
+                [43.1939, -71.5724],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_c1db54c15f56ffd98b7a6b509fd38560 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7b432427f96b5e27e8a5909d66392268 = $(`<div id="html_7b432427f96b5e27e8a5909d66392268" style="width: 100.0%; height: 100.0%;">                <b>New Hampshire</b><br>                Customers: 71<br>                Avg Purchase: $59.42<br>                Total Sales: $4,219<br>                Top Category: Accessories            </div>`)[0];
+                popup_c1db54c15f56ffd98b7a6b509fd38560.setContent(html_7b432427f96b5e27e8a5909d66392268);
+            
+        
+
+        circle_marker_276f691c9838f2e6dc1e2b2e9b9d01a0.bindPopup(popup_c1db54c15f56ffd98b7a6b509fd38560)
+        ;
+
+        
+    
+    
+            var circle_marker_85b65ec6bbe39400628511e8e926c951 = L.circleMarker(
+                [40.0583, -74.4057],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_9f0b219d02a6f1f332e1b94494fb4993 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_18cd6f70ca08545d842ac27d4d849bf8 = $(`<div id="html_18cd6f70ca08545d842ac27d4d849bf8" style="width: 100.0%; height: 100.0%;">                <b>New Jersey</b><br>                Customers: 67<br>                Avg Purchase: $56.75<br>                Total Sales: $3,802<br>                Top Category: Accessories            </div>`)[0];
+                popup_9f0b219d02a6f1f332e1b94494fb4993.setContent(html_18cd6f70ca08545d842ac27d4d849bf8);
+            
+        
+
+        circle_marker_85b65ec6bbe39400628511e8e926c951.bindPopup(popup_9f0b219d02a6f1f332e1b94494fb4993)
+        ;
+
+        
+    
+    
+            var circle_marker_ff9d79159d0077da650b33af3bcd8342 = L.circleMarker(
+                [34.5199, -105.8701],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_39d55452312e9ae9c3d7af68fe8ca906 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_05eeab31e2f536e024912df8bdccf2b6 = $(`<div id="html_05eeab31e2f536e024912df8bdccf2b6" style="width: 100.0%; height: 100.0%;">                <b>New Mexico</b><br>                Customers: 81<br>                Avg Purchase: $61.9<br>                Total Sales: $5,014<br>                Top Category: Accessories            </div>`)[0];
+                popup_39d55452312e9ae9c3d7af68fe8ca906.setContent(html_05eeab31e2f536e024912df8bdccf2b6);
+            
+        
+
+        circle_marker_ff9d79159d0077da650b33af3bcd8342.bindPopup(popup_39d55452312e9ae9c3d7af68fe8ca906)
+        ;
+
+        
+    
+    
+            var circle_marker_7fddb3cd93a12feb60a80ee6e2ad57a9 = L.circleMarker(
+                [42.1657, -74.9481],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_61f1d478a6b366e91b7cb871b1966527 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a42b662310930275f084caee3fdbb92f = $(`<div id="html_a42b662310930275f084caee3fdbb92f" style="width: 100.0%; height: 100.0%;">                <b>New York</b><br>                Customers: 87<br>                Avg Purchase: $60.43<br>                Total Sales: $5,257<br>                Top Category: Clothing            </div>`)[0];
+                popup_61f1d478a6b366e91b7cb871b1966527.setContent(html_a42b662310930275f084caee3fdbb92f);
+            
+        
+
+        circle_marker_7fddb3cd93a12feb60a80ee6e2ad57a9.bindPopup(popup_61f1d478a6b366e91b7cb871b1966527)
+        ;
+
+        
+    
+    
+            var circle_marker_48fb56ad2ed22e100209fd1756a0444b = L.circleMarker(
+                [35.7596, -79.0193],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.8, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_763549cf094bf93b93110c3a649a5e7e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9778861fc06ec0f1947209b29b1173a1 = $(`<div id="html_9778861fc06ec0f1947209b29b1173a1" style="width: 100.0%; height: 100.0%;">                <b>North Carolina</b><br>                Customers: 78<br>                Avg Purchase: $60.79<br>                Total Sales: $4,742<br>                Top Category: Clothing            </div>`)[0];
+                popup_763549cf094bf93b93110c3a649a5e7e.setContent(html_9778861fc06ec0f1947209b29b1173a1);
+            
+        
+
+        circle_marker_48fb56ad2ed22e100209fd1756a0444b.bindPopup(popup_763549cf094bf93b93110c3a649a5e7e)
+        ;
+
+        
+    
+    
+            var circle_marker_260cb4d5b0a2ba7fcf9c1d2e552ab390 = L.circleMarker(
+                [47.5515, -101.002],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_c80cf17415991ee8b7b39f42aec0a262 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4090eafbb26efdf28f4bed133b8e884a = $(`<div id="html_4090eafbb26efdf28f4bed133b8e884a" style="width: 100.0%; height: 100.0%;">                <b>North Dakota</b><br>                Customers: 83<br>                Avg Purchase: $62.89<br>                Total Sales: $5,220<br>                Top Category: Clothing            </div>`)[0];
+                popup_c80cf17415991ee8b7b39f42aec0a262.setContent(html_4090eafbb26efdf28f4bed133b8e884a);
+            
+        
+
+        circle_marker_260cb4d5b0a2ba7fcf9c1d2e552ab390.bindPopup(popup_c80cf17415991ee8b7b39f42aec0a262)
+        ;
+
+        
+    
+    
+            var circle_marker_82d64f57f49ae3320253f643447c1e7d = L.circleMarker(
+                [40.4173, -82.9071],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_92a8613adcef77d47f6d591b678ab0dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91bdadb1446c4a6e254b6905c02227d5 = $(`<div id="html_91bdadb1446c4a6e254b6905c02227d5" style="width: 100.0%; height: 100.0%;">                <b>Ohio</b><br>                Customers: 77<br>                Avg Purchase: $60.38<br>                Total Sales: $4,649<br>                Top Category: Clothing            </div>`)[0];
+                popup_92a8613adcef77d47f6d591b678ab0dd.setContent(html_91bdadb1446c4a6e254b6905c02227d5);
+            
+        
+
+        circle_marker_82d64f57f49ae3320253f643447c1e7d.bindPopup(popup_92a8613adcef77d47f6d591b678ab0dd)
+        ;
+
+        
+    
+    
+            var circle_marker_1e9d459b2dbdf79f3764ac1f9fdc1eca = L.circleMarker(
+                [35.5653, -96.9289],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_15ccc814eb19d77a99621d5e6fe952bc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b7df644e444aecf81f3ba06c5eb868d = $(`<div id="html_0b7df644e444aecf81f3ba06c5eb868d" style="width: 100.0%; height: 100.0%;">                <b>Oklahoma</b><br>                Customers: 75<br>                Avg Purchase: $58.35<br>                Total Sales: $4,376<br>                Top Category: Clothing            </div>`)[0];
+                popup_15ccc814eb19d77a99621d5e6fe952bc.setContent(html_0b7df644e444aecf81f3ba06c5eb868d);
+            
+        
+
+        circle_marker_1e9d459b2dbdf79f3764ac1f9fdc1eca.bindPopup(popup_15ccc814eb19d77a99621d5e6fe952bc)
+        ;
+
+        
+    
+    
+            var circle_marker_49bc2539dcee6e24e49380b8816d90a3 = L.circleMarker(
+                [44.572, -122.0709],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_1a7604daff3a159248350b5f103b580d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76cf40610026f62a636b7360a3d7e3b6 = $(`<div id="html_76cf40610026f62a636b7360a3d7e3b6" style="width: 100.0%; height: 100.0%;">                <b>Oregon</b><br>                Customers: 74<br>                Avg Purchase: $57.34<br>                Total Sales: $4,243<br>                Top Category: Clothing            </div>`)[0];
+                popup_1a7604daff3a159248350b5f103b580d.setContent(html_76cf40610026f62a636b7360a3d7e3b6);
+            
+        
+
+        circle_marker_49bc2539dcee6e24e49380b8816d90a3.bindPopup(popup_1a7604daff3a159248350b5f103b580d)
+        ;
+
+        
+    
+    
+            var circle_marker_2b3e920d2f055348c3e8e6a3591d361b = L.circleMarker(
+                [41.2033, -77.1945],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.4, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_a82949ec87ecc413171dea89eee3690d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d6d750d369e9e87e0ec90ac5c18c8f6 = $(`<div id="html_0d6d750d369e9e87e0ec90ac5c18c8f6" style="width: 100.0%; height: 100.0%;">                <b>Pennsylvania</b><br>                Customers: 74<br>                Avg Purchase: $66.57<br>                Total Sales: $4,926<br>                Top Category: Clothing            </div>`)[0];
+                popup_a82949ec87ecc413171dea89eee3690d.setContent(html_0d6d750d369e9e87e0ec90ac5c18c8f6);
+            
+        
+
+        circle_marker_2b3e920d2f055348c3e8e6a3591d361b.bindPopup(popup_a82949ec87ecc413171dea89eee3690d)
+        ;
+
+        
+    
+    
+            var circle_marker_2f472a3ad38960b3e6f95f87c29b8b74 = L.circleMarker(
+                [41.6809, -71.5118],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_a149c6115a1d6de31d2a9888ccc9270b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0638ac7a325c37e87602c02114399486 = $(`<div id="html_0638ac7a325c37e87602c02114399486" style="width: 100.0%; height: 100.0%;">                <b>Rhode Island</b><br>                Customers: 63<br>                Avg Purchase: $61.44<br>                Total Sales: $3,871<br>                Top Category: Clothing            </div>`)[0];
+                popup_a149c6115a1d6de31d2a9888ccc9270b.setContent(html_0638ac7a325c37e87602c02114399486);
+            
+        
+
+        circle_marker_2f472a3ad38960b3e6f95f87c29b8b74.bindPopup(popup_a149c6115a1d6de31d2a9888ccc9270b)
+        ;
+
+        
+    
+    
+            var circle_marker_5cc705e29b3bdbd59aa4cb2f0212f88b = L.circleMarker(
+                [33.8569, -80.945],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.6, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_d33de9397d5bd7eefe4852eb3509aeea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71fb405cbab59c5aadde64ab03dbaccc = $(`<div id="html_71fb405cbab59c5aadde64ab03dbaccc" style="width: 100.0%; height: 100.0%;">                <b>South Carolina</b><br>                Customers: 76<br>                Avg Purchase: $58.41<br>                Total Sales: $4,439<br>                Top Category: Clothing            </div>`)[0];
+                popup_d33de9397d5bd7eefe4852eb3509aeea.setContent(html_71fb405cbab59c5aadde64ab03dbaccc);
+            
+        
+
+        circle_marker_5cc705e29b3bdbd59aa4cb2f0212f88b.bindPopup(popup_d33de9397d5bd7eefe4852eb3509aeea)
+        ;
+
+        
+    
+    
+            var circle_marker_b8bdd7d3c704639682710c13e54154ee = L.circleMarker(
+                [44.2998, -99.4388],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.0, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_b4ef031eccfe86810794f4c2cd93409c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_981849d1089958dfdae205959a6d9ce4 = $(`<div id="html_981849d1089958dfdae205959a6d9ce4" style="width: 100.0%; height: 100.0%;">                <b>South Dakota</b><br>                Customers: 70<br>                Avg Purchase: $60.51<br>                Total Sales: $4,236<br>                Top Category: Clothing            </div>`)[0];
+                popup_b4ef031eccfe86810794f4c2cd93409c.setContent(html_981849d1089958dfdae205959a6d9ce4);
+            
+        
+
+        circle_marker_b8bdd7d3c704639682710c13e54154ee.bindPopup(popup_b4ef031eccfe86810794f4c2cd93409c)
+        ;
+
+        
+    
+    
+            var circle_marker_2f0c3672103aa0efd01c9cebc41d6d0f = L.circleMarker(
+                [35.7478, -86.6923],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_2f135e813116ebfbc5f95dacb8764a64 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_22f236feaeb980f0ab615a74ff6a2115 = $(`<div id="html_22f236feaeb980f0ab615a74ff6a2115" style="width: 100.0%; height: 100.0%;">                <b>Tennessee</b><br>                Customers: 77<br>                Avg Purchase: $61.97<br>                Total Sales: $4,772<br>                Top Category: Clothing            </div>`)[0];
+                popup_2f135e813116ebfbc5f95dacb8764a64.setContent(html_22f236feaeb980f0ab615a74ff6a2115);
+            
+        
+
+        circle_marker_2f0c3672103aa0efd01c9cebc41d6d0f.bindPopup(popup_2f135e813116ebfbc5f95dacb8764a64)
+        ;
+
+        
+    
+    
+            var circle_marker_c60050b930812e619746ffbf69c62c1e = L.circleMarker(
+                [31.0545, -97.5635],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_50547cbdc35b72c1b3ef52e311803855 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7de2762f1461e076a28f3364c3fcb78 = $(`<div id="html_c7de2762f1461e076a28f3364c3fcb78" style="width: 100.0%; height: 100.0%;">                <b>Texas</b><br>                Customers: 77<br>                Avg Purchase: $61.19<br>                Total Sales: $4,712<br>                Top Category: Clothing            </div>`)[0];
+                popup_50547cbdc35b72c1b3ef52e311803855.setContent(html_c7de2762f1461e076a28f3364c3fcb78);
+            
+        
+
+        circle_marker_c60050b930812e619746ffbf69c62c1e.bindPopup(popup_50547cbdc35b72c1b3ef52e311803855)
+        ;
+
+        
+    
+    
+            var circle_marker_c6b0894627a7497a95748114f9aad55d = L.circleMarker(
+                [39.321, -111.0937],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_aed8df1fc33fe7a26a1022533aa1d325 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fbb390a8cc03b3413fc36dc16b457d6 = $(`<div id="html_8fbb390a8cc03b3413fc36dc16b457d6" style="width: 100.0%; height: 100.0%;">                <b>Utah</b><br>                Customers: 71<br>                Avg Purchase: $62.58<br>                Total Sales: $4,443<br>                Top Category: Clothing            </div>`)[0];
+                popup_aed8df1fc33fe7a26a1022533aa1d325.setContent(html_8fbb390a8cc03b3413fc36dc16b457d6);
+            
+        
+
+        circle_marker_c6b0894627a7497a95748114f9aad55d.bindPopup(popup_aed8df1fc33fe7a26a1022533aa1d325)
+        ;
+
+        
+    
+    
+            var circle_marker_a36d4b80dfc0a23cfaabae5a24a79cce = L.circleMarker(
+                [44.5588, -72.5778],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_63264be239496213630a4a8e0d6e81e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1f398e86bc0b9c273687c898e647a1d1 = $(`<div id="html_1f398e86bc0b9c273687c898e647a1d1" style="width: 100.0%; height: 100.0%;">                <b>Vermont</b><br>                Customers: 85<br>                Avg Purchase: $57.18<br>                Total Sales: $4,860<br>                Top Category: Clothing            </div>`)[0];
+                popup_63264be239496213630a4a8e0d6e81e4.setContent(html_1f398e86bc0b9c273687c898e647a1d1);
+            
+        
+
+        circle_marker_a36d4b80dfc0a23cfaabae5a24a79cce.bindPopup(popup_63264be239496213630a4a8e0d6e81e4)
+        ;
+
+        
+    
+    
+            var circle_marker_56b29c8f3448fc7810318df3e1c78f8c = L.circleMarker(
+                [37.4316, -78.6569],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.7, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_a7fdbada7943475e9c4184a5839b7970 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee4dc0652f3a589d9ef43f73c8b8859c = $(`<div id="html_ee4dc0652f3a589d9ef43f73c8b8859c" style="width: 100.0%; height: 100.0%;">                <b>Virginia</b><br>                Customers: 77<br>                Avg Purchase: $62.88<br>                Total Sales: $4,842<br>                Top Category: Clothing            </div>`)[0];
+                popup_a7fdbada7943475e9c4184a5839b7970.setContent(html_ee4dc0652f3a589d9ef43f73c8b8859c);
+            
+        
+
+        circle_marker_56b29c8f3448fc7810318df3e1c78f8c.bindPopup(popup_a7fdbada7943475e9c4184a5839b7970)
+        ;
+
+        
+    
+    
+            var circle_marker_5b5cddafdda2fe4a73f419157917922c = L.circleMarker(
+                [47.7511, -120.7401],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.3, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_ab2b1e0f52100cc1fdb1f1fec547c3f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d23eff5541bd77866c201d081d6435b = $(`<div id="html_0d23eff5541bd77866c201d081d6435b" style="width: 100.0%; height: 100.0%;">                <b>Washington</b><br>                Customers: 73<br>                Avg Purchase: $63.33<br>                Total Sales: $4,623<br>                Top Category: Clothing            </div>`)[0];
+                popup_ab2b1e0f52100cc1fdb1f1fec547c3f5.setContent(html_0d23eff5541bd77866c201d081d6435b);
+            
+        
+
+        circle_marker_5b5cddafdda2fe4a73f419157917922c.bindPopup(popup_ab2b1e0f52100cc1fdb1f1fec547c3f5)
+        ;
+
+        
+    
+    
+            var circle_marker_6926f83f5376c3cde7ce55eb111c980e = L.circleMarker(
+                [38.5976, -80.4549],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_1b983ca3e21881e50fe087b5238c1d9c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_814beb4c2509a02928c8c1b11da1fd8c = $(`<div id="html_814beb4c2509a02928c8c1b11da1fd8c" style="width: 100.0%; height: 100.0%;">                <b>West Virginia</b><br>                Customers: 81<br>                Avg Purchase: $63.88<br>                Total Sales: $5,174<br>                Top Category: Accessories            </div>`)[0];
+                popup_1b983ca3e21881e50fe087b5238c1d9c.setContent(html_814beb4c2509a02928c8c1b11da1fd8c);
+            
+        
+
+        circle_marker_6926f83f5376c3cde7ce55eb111c980e.bindPopup(popup_1b983ca3e21881e50fe087b5238c1d9c)
+        ;
+
+        
+    
+    
+            var circle_marker_a3c8d0cd8c2e5f044a3d17a161bf63fa = L.circleMarker(
+                [44.2563, -89.6385],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.5, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_262a3d5a5d72e0cf433d33af3ebc5b94 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9841b6e7d187e439a3d180a4a2a4b976 = $(`<div id="html_9841b6e7d187e439a3d180a4a2a4b976" style="width: 100.0%; height: 100.0%;">                <b>Wisconsin</b><br>                Customers: 75<br>                Avg Purchase: $55.95<br>                Total Sales: $4,196<br>                Top Category: Clothing            </div>`)[0];
+                popup_262a3d5a5d72e0cf433d33af3ebc5b94.setContent(html_9841b6e7d187e439a3d180a4a2a4b976);
+            
+        
+
+        circle_marker_a3c8d0cd8c2e5f044a3d17a161bf63fa.bindPopup(popup_262a3d5a5d72e0cf433d33af3ebc5b94)
+        ;
+
+        
+    
+    
+            var circle_marker_4bf921c0d2ab4bc524ebb7d439be3a77 = L.circleMarker(
+                [42.7475, -107.2085],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.1, "stroke": true, "weight": 3}
+            ).addTo(map_52d701ea4aad218882ff1f124df9c73d);
+        
+    
+        var popup_2142cd683b60bad232c0593773481eb1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7c5802fa54cd80facd7e6863cb47204e = $(`<div id="html_7c5802fa54cd80facd7e6863cb47204e" style="width: 100.0%; height: 100.0%;">                <b>Wyoming</b><br>                Customers: 71<br>                Avg Purchase: $60.69<br>                Total Sales: $4,309<br>                Top Category: Clothing            </div>`)[0];
+                popup_2142cd683b60bad232c0593773481eb1.setContent(html_7c5802fa54cd80facd7e6863cb47204e);
+            
+        
+
+        circle_marker_4bf921c0d2ab4bc524ebb7d439be3a77.bindPopup(popup_2142cd683b60bad232c0593773481eb1)
+        ;
+
+        
+    
+</script>
+</html>
